@@ -20,9 +20,6 @@
 
 
 
-
-<hr>
-
 #### `@Entity`
 * Annotates class signature
 * **Description:**
