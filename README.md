@@ -7,8 +7,8 @@
 	* [Model View Controller Architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
 ## Instructions
-* This project is a complete Spring boot application lacking annotations.
-* Your objective is to add the correct annotations above each class signature and field which requires it.
+* This project is a complete Spring boot application with annotations removed.
+* Your objective is to add the correct annotations above each class member which requires it.
 * Some tests have been created. However, the the veracity of the application should be tested by making HTTP-requests via the [Postman application](https://www.getpostman.com/downloads/).
 
 
