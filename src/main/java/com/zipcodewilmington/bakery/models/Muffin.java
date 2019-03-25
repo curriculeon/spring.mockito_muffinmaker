@@ -6,6 +6,9 @@ public class Muffin {
 
     private String flavor;
 
+    public Muffin() {
+    }
+
     public Muffin(String flavor) {
         this.flavor = flavor;
     }

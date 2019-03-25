@@ -2,40 +2,34 @@ package com.zipcodewilmington.bakery.controllers;
 
 import com.zipcodewilmington.bakery.models.Baker;
 import com.zipcodewilmington.bakery.repositories.BakerRepository;
+import com.zipcodewilmington.bakery.services.BakerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 public class BakerController {
+    private BakerService service;
 
-    private BakerRepository bakerRepository;
-
-    public BakerController(BakerRepository bakerRepository) {
-        this.bakerRepository = bakerRepository;
+    public BakerController(BakerService service) {
+        this.service = service;
     }
 
     public ResponseEntity<Iterable<Baker>> index() {
-        return new ResponseEntity<>(this.bakerRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
 
     public ResponseEntity<Baker> show(Long id) {
-        return new ResponseEntity<>(this.bakerRepository.findOne(id), HttpStatus.OK);
+        return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
     public ResponseEntity<Baker> create(Baker baker) {
-        return new ResponseEntity<>(this.bakerRepository.save(baker), HttpStatus.CREATED);
+        return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
 
     public ResponseEntity<Baker> update(Long id, Baker baker) {
-        Baker foundBaker = bakerRepository.findOne(id);
-
-        foundBaker.setName(baker.getName());
-        foundBaker.setSpecialty(baker.getSpecialty());
-
-        return new ResponseEntity<>(this.bakerRepository.save(foundBaker), HttpStatus.OK);
+        return new ResponseEntity<>(service.update(id, baker), HttpStatus.OK);
     }
 
     public ResponseEntity<Boolean> destroy(Long id) {
-        this.bakerRepository.delete(id);
-        return new ResponseEntity<>(true, HttpStatus.OK);
+        return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
     }
 }

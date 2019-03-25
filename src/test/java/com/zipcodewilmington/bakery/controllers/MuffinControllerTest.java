@@ -1,7 +1,8 @@
-package com.zipcodewilmington.bakery;
+package com.zipcodewilmington.bakery.controllers;
 
-import com.zipcodewilmington.bakery.models.Baker;
-import com.zipcodewilmington.bakery.repositories.BakerRepository;
+
+import com.zipcodewilmington.bakery.models.Muffin;
+import com.zipcodewilmington.bakery.repositories.MuffinRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
@@ -14,46 +15,41 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-
-/**
- * @author leon on 8/30/18.
- */
 @SpringBootTest
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
-public class BakerControllerTest {
+public class MuffinControllerTest {
 
     @Autowired
     private MockMvc mvc;
 
-
     @MockBean
-    private BakerRepository repository;
+    private MuffinRepository repository;
 
     @Test
     public void testShow() throws Exception {
         Long givenId = 1L;
         BDDMockito
                 .given(repository.findOne(givenId))
-                .willReturn(new Baker("New Baker!", null, null));
+                .willReturn(new Muffin("blueberry"));
 
-        String expectedContent = "{\"id\":null,\"name\":\"New Baker!\",\"employeeId\":null,\"specialty\":null}";
+        String expectedContent = "{\"id\":null,\"flavor\":\"blueberry\"}";
         this.mvc.perform(MockMvcRequestBuilders
-                .get("/bakers/" + givenId))
+                .get("/muffins/" + givenId))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedContent));
     }
 
     @Test
     public void testCreate() throws Exception {
-        Baker baker = new Baker("New Baker!", null, null);
+        Muffin muffin = new Muffin("blueberry");
         BDDMockito
-                .given(repository.save(baker))
-                .willReturn(baker);
+                .given(repository.save(muffin))
+                .willReturn(muffin);
 
-        String expectedContent="{\"id\":null,\"name\":\"New Baker!\",\"employeeId\":null,\"specialty\":null}";
+        String expectedContent = "{\"id\":null,\"flavor\":\"blueberry\"}";
         this.mvc.perform(MockMvcRequestBuilders
-                .post("/bakers/"))
+                .post("/muffins/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedContent));
     }

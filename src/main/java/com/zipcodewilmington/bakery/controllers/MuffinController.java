@@ -1,36 +1,34 @@
 package com.zipcodewilmington.bakery.controllers;
 
 import com.zipcodewilmington.bakery.models.Muffin;
-import com.zipcodewilmington.bakery.repositories.MuffinRepository;
+import com.zipcodewilmington.bakery.services.MuffinService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 public class MuffinController {
+    private MuffinService service;
 
-    private MuffinRepository muffinRepository;
+    public MuffinController(MuffinService service) {
+        this.service = service;
+    }
 
     public ResponseEntity<Iterable<Muffin>> index() {
-        return new ResponseEntity<>(this.muffinRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
 
     public ResponseEntity<Muffin> show(Long id) {
-        return new ResponseEntity<>(this.muffinRepository.findOne(id), HttpStatus.OK);
+        return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
-    public ResponseEntity<Muffin> create(Muffin muffin) {
-        return new ResponseEntity<>(this.muffinRepository.save(muffin), HttpStatus.CREATED);
+    public ResponseEntity<Muffin> create(Muffin baker) {
+        return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
 
-    public ResponseEntity<Muffin> update(Long id, Muffin muffin) {
-        Muffin foundMuffin = muffinRepository.findOne(id);
-        foundMuffin.setFlavor(muffin.getFlavor());
-
-        return new ResponseEntity<>(this.muffinRepository.save(foundMuffin), HttpStatus.OK);
+    public ResponseEntity<Muffin> update(Long id, Muffin baker) {
+        return new ResponseEntity<>(service.update(id, baker), HttpStatus.OK);
     }
 
     public ResponseEntity<Boolean> destroy(Long id) {
-        this.muffinRepository.delete(id);
-        return new ResponseEntity<>(true, HttpStatus.OK);
+        return new ResponseEntity<>(service.delete(id), HttpStatus.OK);
     }
-
 }
