@@ -98,10 +98,21 @@
 	* If is used alone, it will be wired by type
 	* If more than one bean of same type are declared in the container `@Autowired` does not know which beans to use for injection.
 * **Pre-requesites for use:**
-	*
+	* The field must be annotated with some form of `@Component`.
 	
 	
-	
+
+ 
+<hr>
+
+#### `@Service`
+* Annotates class signature
+* **Description**
+	* specialized form of `@Component`
+	* responsible for performing service tasks
+	* in many case you use this annotation for best practice, but isn't _always_ necessary.
+* **Prerequisites for use:**
+	* none	
 	
 	
 	
@@ -111,11 +122,12 @@
 #### `@Controller`
 * Annotates class signature
 * **Description**
+	* specialized form of `@Component`
 	* indicates that a particular class serves the role of a controller
 	* acts as a stereotype for the annotated class, indicating its role
 	* dispatcher scans such annotated classes for mapped methods and detects @RequestMapping annotations
 * **Pre-requesites for use:**
-	* 
+	* none
 
  
  
@@ -125,13 +137,46 @@
  
  
 <hr>
-
-#### `@Service`
-* Annotates class signature
+ 
+#### `@RequestMapping`
+* Annotates a method signature
 * **Description**
-	* responsible for performing service tasks
-	* in many case you use this annotation for best practice, but isn't _always_ necessary.
-* **Prerequisites for use:**
-	* 
+	* annotation maps HTTP requests to handler methods of MVC and REST controllers.
+* **Pre-requesites for use**
+	* class must be a annotated with `@Controller`
+
+	
+	
+	
+	
+	
+	
+	
+<hr>
+ 
+#### `@PathVariable`
+* Annotates a method parameter
+* **Description**
+	* indicates that a method parameter should be bound to a URI template variable
+* **Pre-requesites for use**
+	* class must be a annotated with `@Controller`
+
+
+
+
+
+
+
+<hr>
+ 
+#### `@RequestParam`
+* Annotates a method parameter
+* **Description**
+	* indicates that a method parameter should be bound to a web request parameter
+	* used to extract query parameters, form parameters 
+* **Pre-requesites for use**
+	* class must be a annotated with `@Controller`
+ 
+ 
 
 
