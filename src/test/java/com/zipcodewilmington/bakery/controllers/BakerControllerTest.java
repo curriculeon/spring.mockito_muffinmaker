@@ -2,7 +2,6 @@ package com.zipcodewilmington.bakery.controllers;
 
 import com.zipcodewilmington.bakery.models.Baker;
 import com.zipcodewilmington.bakery.repositories.BakerRepository;
-import com.zipcodewilmington.bakery.repositories.BakerRepositoryTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
