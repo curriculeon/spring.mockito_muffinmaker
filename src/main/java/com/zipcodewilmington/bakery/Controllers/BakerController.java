@@ -9,6 +9,10 @@ public class BakerController {
 
     private BakerRepository bakerRepository;
 
+    public BakerController(BakerRepository bakerRepository) {
+        this.bakerRepository = bakerRepository;
+    }
+
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(this.bakerRepository.findAll(), HttpStatus.OK);
     }
