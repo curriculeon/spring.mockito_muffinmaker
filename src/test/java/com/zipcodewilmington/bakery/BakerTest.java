@@ -2,7 +2,7 @@ package com.zipcodewilmington.bakery;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zipcodewilmington.bakery.Models.Baker;
+import com.zipcodewilmington.bakery.models.Baker;
 import org.junit.Assert;
 import org.junit.Test;
 

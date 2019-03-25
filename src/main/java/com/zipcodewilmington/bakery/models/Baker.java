@@ -1,4 +1,4 @@
-package com.zipcodewilmington.bakery.Models;
+package com.zipcodewilmington.bakery.models;
 
 
 public class Baker {

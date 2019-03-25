@@ -1,9 +1,7 @@
 package com.zipcodewilmington.bakery;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zipcodewilmington.bakery.Models.Baker;
-import com.zipcodewilmington.bakery.Repositories.BakerRepository;
+import com.zipcodewilmington.bakery.models.Baker;
+import com.zipcodewilmington.bakery.repositories.BakerRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;

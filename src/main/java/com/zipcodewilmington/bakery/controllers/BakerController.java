@@ -1,7 +1,7 @@
-package com.zipcodewilmington.bakery.Controllers;
+package com.zipcodewilmington.bakery.controllers;
 
-import com.zipcodewilmington.bakery.Models.Baker;
-import com.zipcodewilmington.bakery.Repositories.BakerRepository;
+import com.zipcodewilmington.bakery.models.Baker;
+import com.zipcodewilmington.bakery.repositories.BakerRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
