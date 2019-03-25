@@ -19,7 +19,14 @@
 
 ### Spring Annotations
 
+
+
+
+
+
+
 <hr>
+
 #### `@Entity`
 * Annotates class signature
 * **Description:**
@@ -34,7 +41,14 @@
 	* Each `Entity` must be annotated with a respective `ID`.
 
 
+
+
+
+
+
+
 <hr>
+
 #### `@Id`
 * Annotates field declarations
 * **Description:**
@@ -44,8 +58,15 @@
 	* Class must be annotated with `@Entity`
 
 	
+	
+	
+	
+	
+	
+	
 		
 <hr>
+
 #### `@GeneratedValue(strategy = GenerationType.ENUM_VALUE)`
 * Annotates `Id` fields.
 * **Description:**
@@ -57,7 +78,18 @@
 * **Pre-requesites for use:**
 	* Field must be annotated with `@Id`.
 
+
+
+
+
+
+
+
+
+
+
 <hr>
+
 #### `@Autowired`
 * Annotates field declaration or method-parameters
 * **Description**
@@ -69,7 +101,13 @@
 	*
 	
 	
+	
+	
+	
+	
+	
 <hr>
+
 #### `@Controller`
 * Annotates class signature
 * **Description**
@@ -80,7 +118,14 @@
 	* 
 
  
+ 
+ 
+ 
+ 
+ 
+ 
 <hr>
+
 #### `@Service`
 * Annotates class signature
 * **Description**
