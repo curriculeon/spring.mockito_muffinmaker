@@ -26,6 +26,7 @@
 	* Allows the persistence provider to recognize it as a persistence class.
 	* An object representative of a snap shot of data from a database.
 	* By default, maps this entity to a table whose name is the name of the annotated class. Can be rerouted via the `@Table` annotation
+	* Entities are said to be _fungible_, or _mutually interchangeable_.
 * **Pre-requesites for use:**
 	* An interface cannot be an entity.
 	* An enum cannot be an entity.
@@ -92,6 +93,23 @@
 	* If more than one bean of same type are declared in the container `@Autowired` does not know which beans to use for injection.
 * **Pre-requesites for use:**
 	* The field must be annotated with some form of `@Component`.
+
+
+
+
+
+
+
+<hr>
+
+#### `@Component`
+* Annotates class signature
+* **Description**
+	* denotes that Spring framework will autodetect these classes for dependency injection when annotation-based configuration and classpath scanning is used.
+* **Prerequisites for use:**
+	* none	
+	
+	
 	
 	
 
