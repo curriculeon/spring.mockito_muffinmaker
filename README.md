@@ -92,7 +92,7 @@
 	* If is used alone, it will be wired by type
 	* If more than one bean of same type are declared in the container `@Autowired` does not know which beans to use for injection.
 * **Pre-requesites for use:**
-	* The field must be annotated with some form of `@Component`.
+	* Field-type must be annotated with some form of `@Component`.
 
 
 
