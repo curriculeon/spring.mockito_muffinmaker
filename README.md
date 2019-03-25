@@ -17,10 +17,6 @@
 ## Developmental Notes
 
 
-### Spring Annotations
-
-
-
 
 
 
