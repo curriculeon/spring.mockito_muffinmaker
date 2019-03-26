@@ -15,7 +15,7 @@ public class MuffinService {
     }
 
     public Muffin show(Long id) {
-        return repository.findOne(id);
+        return repository.findById(id).get();
     }
 
     public Muffin create(Muffin baker) {
@@ -23,13 +23,13 @@ public class MuffinService {
     }
 
     public Muffin update(Long id, Muffin newMuffinData) {
-        Muffin originalMuffin = repository.findOne(id);
+        Muffin originalMuffin = repository.findById(id).get();
         originalMuffin.setFlavor(newMuffinData.getFlavor());
         return repository.save(originalMuffin);
     }
 
     public Boolean delete(Long id) {
-        repository.delete(id);
+        repository.deleteById(id);
         return true;
     }
 }

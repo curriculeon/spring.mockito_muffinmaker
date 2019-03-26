@@ -34,7 +34,7 @@ public class BakerControllerTest {
     public void testShow() throws Exception {
         Long givenId = 1L;
         BDDMockito
-                .given(repository.findOne(givenId))
+                .given(repository.findById(givenId).get())
                 .willReturn(new Baker("New Baker!", null, null));
 
         String expectedContent = "{\"id\":null,\"name\":\"New Baker!\",\"employeeId\":null,\"specialty\":null}";

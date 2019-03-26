@@ -30,7 +30,7 @@ public class MuffinControllerTest {
     public void testShow() throws Exception {
         Long givenId = 1L;
         BDDMockito
-                .given(repository.findOne(givenId))
+                .given(repository.findById(givenId).get())
                 .willReturn(new Muffin("blueberry"));
 
         String expectedContent = "{\"id\":null,\"flavor\":\"blueberry\"}";

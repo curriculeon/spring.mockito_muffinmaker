@@ -15,7 +15,7 @@ public class BakerService {
     }
 
     public Baker show(Long id) {
-        return repository.findOne(id);
+        return repository.findById(id).get();
     }
 
     public Baker create(Baker baker) {
@@ -23,14 +23,14 @@ public class BakerService {
     }
 
     public Baker update(Long id, Baker newBakerData) {
-        Baker originalBaker = repository.findOne(id);
+        Baker originalBaker = repository.findById(id).get();
         originalBaker.setName(newBakerData.getName());
         originalBaker.setSpecialty(newBakerData.getSpecialty());
         return repository.save(originalBaker);
     }
 
     public Boolean delete(Long id) {
-        repository.delete(id);
+        repository.deleteById(id);
         return true;
     }
 }
