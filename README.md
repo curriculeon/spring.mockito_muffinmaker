@@ -4,6 +4,7 @@
 	* [Spring Annotations](https://springframework.guru/spring-framework-annotations/)
 	* [CRUD Operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 	* [Web services](https://en.wikipedia.org/wiki/Web_service)
+	* [API Endpoints](https://stackoverflow.com/questions/2122604/what-is-an-endpoint)
 	* [Model View Controller Architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
 ## Instructions
