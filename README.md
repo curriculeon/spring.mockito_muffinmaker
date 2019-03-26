@@ -1,4 +1,4 @@
-# Wilhem's Muffin Bakery
+# Wilhem's Wacky Bakery
 * **Objective** - to implement a _webservice_ which exposes _endpoints_ for creating, reading, updating, and deleting `Baker` and `Muffin` objects.
 * **Purpose** - to demonstrate the use of
 	* [Spring Annotations](https://springframework.guru/spring-framework-annotations/)
