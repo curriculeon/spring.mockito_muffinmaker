@@ -1,4 +1,4 @@
-package com.zipcodewilmington.bakery;
+package com.github.curriculeon;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com.zipcodewilmington.bakery.services;
+package com.github.curriculeon.services;
 
-import com.zipcodewilmington.bakery.models.Baker;
-import com.zipcodewilmington.bakery.repositories.BakerRepository;
+import com.github.curriculeon.repositories.BakerRepository;
+import com.github.curriculeon.models.Baker;
 
 public class BakerService {
     private BakerRepository repository;

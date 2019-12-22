@@ -1,6 +1,6 @@
-package com.zipcodewilmington.bakery.repositories;
+package com.github.curriculeon.repositories;
 
-import com.zipcodewilmington.bakery.models.Baker;
+import com.github.curriculeon.models.Baker;
 import org.springframework.data.repository.CrudRepository;
 
 public interface BakerRepository extends CrudRepository<Baker, Long> {

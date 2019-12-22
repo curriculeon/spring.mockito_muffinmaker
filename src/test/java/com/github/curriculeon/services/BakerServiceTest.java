@@ -1,10 +1,10 @@
-package com.zipcodewilmington.bakery.services;
+package com.github.curriculeon.services;
 
 
-import com.zipcodewilmington.bakery.BakeryApplication;
+import com.github.curriculeon.BakeryApplication;
 
-import com.zipcodewilmington.bakery.controllers.BakerController;
-import com.zipcodewilmington.bakery.models.Baker;
+import com.github.curriculeon.controllers.BakerController;
+import com.github.curriculeon.models.Baker;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,8 +16,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.mockito.BDDMockito.given;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = BakeryApplication.class)

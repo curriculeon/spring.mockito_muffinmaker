@@ -1,4 +1,4 @@
-package com.zipcodewilmington.bakery.models;
+package com.github.curriculeon.models;
 
 import java.util.Objects;
 

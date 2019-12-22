@@ -1,7 +1,7 @@
-package com.zipcodewilmington.bakery.services;
+package com.github.curriculeon.services;
 
-import com.zipcodewilmington.bakery.models.Muffin;
-import com.zipcodewilmington.bakery.repositories.MuffinRepository;
+import com.github.curriculeon.models.Muffin;
+import com.github.curriculeon.repositories.MuffinRepository;
 
 public class MuffinService {
     private MuffinRepository repository;

@@ -1,7 +1,7 @@
-package com.zipcodewilmington.bakery.controllers;
+package com.github.curriculeon.controllers;
 
-import com.zipcodewilmington.bakery.models.Baker;
-import com.zipcodewilmington.bakery.services.BakerService;
+import com.github.curriculeon.services.BakerService;
+import com.github.curriculeon.models.Baker;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

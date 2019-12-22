@@ -1,4 +1,4 @@
-package com.zipcodewilmington.bakery;
+package com.github.curriculeon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

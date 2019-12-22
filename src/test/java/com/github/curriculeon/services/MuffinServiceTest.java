@@ -1,9 +1,7 @@
-package com.zipcodewilmington.bakery.services;
+package com.github.curriculeon.services;
 
-import com.zipcodewilmington.bakery.BakeryApplication;
-import com.zipcodewilmington.bakery.controllers.MuffinController;
-import com.zipcodewilmington.bakery.models.Muffin;
-import com.zipcodewilmington.bakery.repositories.BakerRepository;
+import com.github.curriculeon.controllers.MuffinController;
+import com.github.curriculeon.models.Muffin;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +10,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.mockito.BDDMockito.given;

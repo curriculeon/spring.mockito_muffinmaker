@@ -1,4 +1,4 @@
-# Wilhem's Wacky Bakery
+# Miscbits's Muffin Maker
 * **Objective** - to implement a _webservice_ which exposes _endpoints_ for creating, reading, updating, and deleting `Baker` and `Muffin` objects.
 * **Purpose** - to demonstrate the use of
 	* [Spring Annotations](https://springframework.guru/spring-framework-annotations/)
@@ -6,6 +6,7 @@
 	* [Web services](https://en.wikipedia.org/wiki/Web_service)
 	* [API Endpoints](https://stackoverflow.com/questions/2122604/what-is-an-endpoint)
 	* [Model View Controller Architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+* **Background** - My good friend, [Miscbits](https://github.com/miscbits) helped develop the early versions of this project.
 
 ## Instructions
 * This project is a complete Spring boot application with annotations removed.

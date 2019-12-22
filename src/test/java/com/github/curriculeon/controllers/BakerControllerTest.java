@@ -1,7 +1,7 @@
-package com.zipcodewilmington.bakery.controllers;
+package com.github.curriculeon.controllers;
 
-import com.zipcodewilmington.bakery.models.Baker;
-import com.zipcodewilmington.bakery.repositories.BakerRepository;
+import com.github.curriculeon.models.Baker;
+import com.github.curriculeon.repositories.BakerRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
