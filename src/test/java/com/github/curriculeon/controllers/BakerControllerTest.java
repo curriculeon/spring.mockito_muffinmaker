@@ -15,8 +15,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.util.Optional;
-
 
 /**
  * @author leon on 8/30/18.
@@ -34,34 +32,16 @@ public class BakerControllerTest {
     private BakerRepository repository;
 
     @Test
-    public void testShow() throws Exception {
+    public void testShow() {
+        ShowTest<Long, Baker> showTest = new ShowTest<>(repository, mvc, "/bakers/");
         Long givenId = 1L;
-        BDDMockito
-                .given(repository.findById(givenId))
-                .willReturn(Optional.of(new Baker("New Baker!", null, null)));
-
-        String expectedContent = "{\"id\":null,\"name\":\"New Baker!\",\"employeeId\":null,\"specialty\":null}";
-        this.mvc.perform(MockMvcRequestBuilders
-                .get("/bakers/" + givenId))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string(expectedContent));
+        Baker bakerToBeGenerated = new Baker( null, null, null);
+        showTest.test(givenId, bakerToBeGenerated);
     }
 
     @Test
     public void testCreate() throws Exception {
-        Baker baker = new Baker("New Baker!", null, null);
-        BDDMockito
-                .given(repository.save(baker))
-                .willReturn(baker);
-
-        String expectedContent="{\"id\":null,\"name\":\"New Baker!\",\"employeeId\":null,\"specialty\":null}";
-        this.mvc.perform(MockMvcRequestBuilders
-                .post("/bakers/")
-                .content(expectedContent)
-                .accept(MediaType.APPLICATION_JSON)
-                .contentType(MediaType.APPLICATION_JSON)
-            )
-                .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(MockMvcResultMatchers.content().string(expectedContent));
+        CreateTest<Long, Baker> createTest = new CreateTest<>(repository, mvc, "/bakers/");
+        createTest.test(new Baker("New Baker!", null, null));
     }
 }

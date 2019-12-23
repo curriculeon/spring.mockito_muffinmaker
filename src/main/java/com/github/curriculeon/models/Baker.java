@@ -3,7 +3,7 @@ package com.github.curriculeon.models;
 
 import java.util.Objects;
 
-public class Baker {
+public class Baker implements PersistentTypeInterface<Long> {
     private Long id;
 
     private String name;
