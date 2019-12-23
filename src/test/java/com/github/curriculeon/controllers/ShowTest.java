@@ -37,8 +37,7 @@ final public class ShowTest<
     // given
     public void test(IdType givenId, PersistentType entity) {
         entity.verifyIsEntity();
-        ObjectMapper jsonWriter = new ObjectMapper();
-        String expectedContent = ExceptionalFunction.tryInvoke(jsonWriter::writeValueAsString, entity);
+        String expectedContent = entity.toJsonString();
         BDDMockito
                 .given(this.repo.findById(givenId))
                 .willReturn(Optional.of(entity));

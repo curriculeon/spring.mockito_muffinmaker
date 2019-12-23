@@ -2,7 +2,7 @@ package com.github.curriculeon.models;
 
 import java.util.Objects;
 
-public class Muffin {
+public class Muffin implements PersistentTypeInterface<Long> {
 
     private Long id;
 
