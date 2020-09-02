@@ -2,10 +2,14 @@ package com.github.curriculeon.services;
 
 import com.github.curriculeon.repositories.BakerRepository;
 import com.github.curriculeon.models.Baker;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BakerService {
     private BakerRepository repository;
 
+@Autowired
     public BakerService(BakerRepository repository) {
         this.repository = repository;
     }
@@ -26,6 +30,7 @@ public class BakerService {
         Baker originalBaker = repository.findById(id).get();
         originalBaker.setName(newBakerData.getName());
         originalBaker.setSpecialty(newBakerData.getSpecialty());
+        originalBaker.setEmployeeId(newBakerData.getEmployeeId());
         return repository.save(originalBaker);
     }
 
