@@ -2,9 +2,12 @@ package com.github.curriculeon.services;
 
 import com.github.curriculeon.repositories.BakerRepository;
 import com.github.curriculeon.models.Baker;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BakerService {
-    private BakerRepository repository;
+    private final BakerRepository repository;
 
     public BakerService(BakerRepository repository) {
         this.repository = repository;
